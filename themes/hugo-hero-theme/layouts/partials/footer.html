@@ -1,54 +1,60 @@
 <div class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-3">
-        <div class="footer-inner">
-          <h5 class="footer-menu-title">Debyez Techonolgies</h5>
-          <ul class="footer-menu">
-            <li>
-              <a href="https://www.linkedin.com/company/debyez-technologies/">LinkedIn</a>
-            </li>
-            <li>
-              <a href="{{ .Site.BaseURL }}about">About us</a>
-            </li>
-          </ul>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <div class="footer-inner">
+                    <h5 class="footer-menu-title">Debyez Techonolgies</h5>
+                    <ul class="footer-menu">
+                        <li>
+                            <a
+                                href="https://www.linkedin.com/company/debyez-technologies/"
+                                >LinkedIn</a
+                            >
+                        </li>
+                        <li>
+                            <a href="{{ .Site.BaseURL }}about">About us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="footer-inner">
+                    <h5 class="footer-menu-title">Products</h5>
+                    <ul class="footer-menu">
+                        {{ range where .Site.RegularPages "Section" "products"
+                        }}
+                        <li>
+                            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="footer-inner">
+                    <h5 class="footer-menu-title">Services</h5>
+                    <ul class="footer-menu">
+                        {{ range where .Site.RegularPages "Section" "services"
+                        }}
+                        <li>
+                            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-3">
+                <h5 class="footer-menu-title">Address</h5>
+                <div class="footer-inner">
+                    <ul class="footer-menu">
+                        <li>
+                            Maker Village,Kerala<br />
+                            Technology Innovation Zone,<br />
+                            Kalamassery, Kochi, Kerala 683503
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-3">
-        <div class="footer-inner">
-          <h5 class="footer-menu-title">Products</h5>
-          <ul class="footer-menu">
-            {{ range where .Site.RegularPages "Section" "products" }}
-            <li>
-              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            </li>
-            {{ end }}
-          </ul>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="footer-inner">
-          <h5 class="footer-menu-title">Services</h5>
-          <ul class="footer-menu">
-            {{ range where .Site.RegularPages "Section" "services" }}
-            <li>
-              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            </li>
-            {{ end }}
-          </ul>
-        </div>
-      </div>
-      <div class="col-3">
-        <h5 class="footer-menu-title">Address</h5>
-        <div class="footer-inner">
-          <ul class="footer-menu">
-            <li>
-              Bldg No 60/44 JC Chambers, V 366 <br>
-              Opp Kairali Flat, Panampilly Nagar,<br>
-              Ernakulam, Ernakulam - 682036, Kerala
-          </ul>
-        </div>
-      </div>
     </div>
-  </div>
 </div>
