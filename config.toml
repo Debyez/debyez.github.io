@@ -13,12 +13,12 @@ theme = "hugo-hero-theme"
   background = 'images/fighter-jet.jpg'
 
   [params.logo]
-    mobile = "images/logo-mobile.svg"
+    mobile = "images/logo-new-mobile.png"
     mobile_height = "36px"
     mobile_width = "36px"
-    desktop = "images/logo.svg"
-    desktop_height = "80px"
-    desktop_width = "320px"
+    desktop = "images/logo-new.png"
+    desktop_height = "48px"
+    desktop_width = "48px"
     alt = "Hugo Hero"
 
   [params.homepage_meta_tags]
@@ -50,4 +50,4 @@ theme = "hugo-hero-theme"
 
 [permalinks]
   post = "/:year/:month/:day/:slug/"
-  pages = "/:filename/"
+  pages = "/:contentbasename/"
