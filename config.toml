@@ -50,4 +50,5 @@ theme = "hugo-hero-theme"
 
 [permalinks]
   post = "/:year/:month/:day/:slug/"
-  pages = "/:contentbasename/"
+  # pages = "/:contentbasename/"
+  pages = "/:filename/"
